@@ -29,16 +29,16 @@ while(True):
     OrangeNET = slp.calculateNETValue(orange_attribute_1,orange_attribute_2,weight_value_1,weight_value_2)
     AppleNET = slp.calculateNETValue(apple_attribute_1,apple_attribute_2,weight_value_2,weight_value_2)
 
-    print("NET Orange: ",OrangeNET)
-    print("NET Apple: ",AppleNET)
+    print("NET Orange Value: ",OrangeNET)
+    print("NET Apple Value : ",AppleNET)
     print("------------------------------------")
 
     if(OrangeNET == orange_class):
         if(slp.calculateThresholdValue(OrangeNET,AppleNET,threshold_value)):
-            print("Çıktı : Orange")
+            print("Output : Orange")
             if(AppleNET == apple_class):
                 if(slp.calculateThresholdValue(OrangeNET,AppleNET,threshold_value)):
-                    print("Çıktı : Apple")
+                    print("Output : Apple")
                     break
                 else:
                     weight_value_1, weight_value_2 = slp.reductionWeight(weight_value_1, weight_value_2,
